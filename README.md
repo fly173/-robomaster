@@ -10,6 +10,8 @@
 
 - [官方资源](#官方资源)
 - [机械设计](#机械设计)
+  - [学习资料](#学习资料)
+  - [各兵种开源结构参考](#各兵种开源结构参考)
 - [电控学习](#电控学习)
 - [视觉学习](#视觉学习)
 - [优秀开源战队](#优秀开源战队)
@@ -45,13 +47,74 @@
 
 ### 优秀机械开源设计
 
-| 来源 | 机器人类型 | 链接 |
-|------|----------|------|
-| DJI RoboMaster 官方 | 步兵/英雄/哨兵 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
-| 哈尔滨工程大学创梦之翼战队 | 多种机器人 STEP 文件 | https://github.com/creamsensation |
-| 上海交通大学 SJTU 战队 | 步兵/英雄底盘 | https://github.com/SJTU-RoboMaster-Team |
-| 华中科技大学 HUST 战队 | 发射机构/云台 | https://github.com/HUSTLY2024-LEARNER |
-| GrabCAD RoboMaster 合集 | 多种机器人 | https://grabcad.com/library/tag/robomaster |
+| 来源 | 机器人类型 | 说明 | 链接 |
+|------|----------|------|------|
+| DJI RoboMaster 官方资源中心 | 步兵/英雄/哨兵/工程/飞镖 | 官方 STEP 文件及图纸 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
+| 哈尔滨工程大学创梦之翼战队 | 多种机器人 | STEP 文件开源 | https://github.com/creamsensation |
+| 上海交通大学交龙战队 | 步兵/英雄底盘 | 电控+机械开源 | https://github.com/SJTU-RoboMaster-Team |
+| 华中科技大学狼牙战队 | 发射机构/云台 | 电控+培训资料 | https://github.com/HUSTLY2024-LEARNER |
+| rm-controls/rm_description | 全兵种 URDF 模型 | 步兵/英雄/哨兵/工程/无人机/平衡步兵 URDF+Mesh | https://github.com/rm-controls/rm_description |
+| robomaster-oss/rmoss_gz_resources | 全兵种仿真模型 | Gazebo/Ignition SDF 机器人模型 | https://github.com/robomaster-oss/rmoss_gz_resources |
+| RoboMaster/RoboRTS | 标准步兵 | ICRA AI 挑战赛全向步兵 URDF | https://github.com/RoboMaster/RoboRTS |
+| LihanChen2004/pb_rm_simulation | 哨兵机器人 | ROS2 Gazebo 哨兵仿真（含 URDF 模型） | https://github.com/LihanChen2004/pb_rm_simulation |
+| GrabCAD RoboMaster 合集 | 多种机器人 | 社区上传的 STEP/SolidWorks 模型 | https://grabcad.com/library/tag/robomaster |
+| RoboMaster BBS 机械区 | 多种机器人 | 各战队分享的设计图纸与 STEP 文件 | https://bbs.robomaster.com |
+
+### 各兵种开源结构参考
+
+#### 🔫 步兵（Standard Infantry）
+标准步兵是参赛最广泛的兵种，采用麦克纳姆轮全向底盘 + 两轴云台 + 发射机构。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 官方步兵设计文件 | DJI 发布的步兵 STEP/图纸 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
+| rm_description standard | 步兵 URDF（3/4/5 代） | https://github.com/rm-controls/rm_description/tree/master/urdf/standard |
+| RoboRTS URDF | ICRA 全向步兵模型（带麦轮） | https://github.com/RoboMaster/RoboRTS |
+| GrabCAD 步兵模型 | 社区 CAD 模型搜索 | https://grabcad.com/library?query=robomaster+infantry |
+
+#### 🏹 英雄（Hero）
+英雄机器人使用大号弹丸，通常更高更重，发射功率更强。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 官方英雄设计文件 | DJI 发布的英雄 STEP/图纸 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
+| rm_description hero | 英雄 URDF + Mesh 模型 | https://github.com/rm-controls/rm_description/tree/master/urdf/hero |
+
+#### 🛡️ 哨兵（Sentry）
+哨兵在固定轨道上自主运行，是全自动作战单元，通常搭载激光雷达和双云台。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 官方哨兵设计文件 | DJI 发布的哨兵 STEP/图纸 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
+| rm_description sentry | 哨兵 URDF + Mesh 模型 | https://github.com/rm-controls/rm_description/tree/master/urdf/sentry |
+| pb_rm_simulation | 北理工珞珈战队哨兵 Gazebo 仿真（含机械模型） | https://github.com/LihanChen2004/pb_rm_simulation |
+| pb2025_sentry_nav | 深圳北理工极地熊战队哨兵导航框架 | https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav |
+
+#### 🦾 工程车（Engineer）
+工程车负责救援和矿石搬运，结构最复杂，通常含机械臂和提升机构。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 官方工程车设计文件 | DJI 发布的工程 STEP/图纸 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
+| rm_description engineer | 工程车 URDF + Mesh 模型 | https://github.com/rm-controls/rm_description/tree/master/urdf/engineer |
+| rm_engineer | rm-controls 工程车控制框架 | https://github.com/rm-controls/rm_engineer |
+
+#### ⚖️ 平衡步兵（Balance Infantry）
+平衡步兵使用两轮平衡底盘（倒立摆），是近年引入的新兵种，机械结构独特。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| rm_description balance | 平衡步兵 URDF + Mesh 模型 | https://github.com/rm-controls/rm_description/tree/master/urdf/balance |
+| XRobot 平衡步兵 | 青岛大学未来战队，含平衡底盘电控 | https://github.com/xrobot-org/XRobot |
+
+#### ✈️ 无人机（Aerial Robot）
+无人机组别使用小型四旋翼搭载发射机构，需兼顾飞行稳定性与射击精度。
+
+| 资源 | 说明 | 链接 |
+|------|------|------|
+| 官方无人机设计文件 | DJI 发布的空中机器人 STEP/图纸 | https://www.robomaster.com/zh-CN/resource/pages/1016 |
+| rm_description drone | 无人机 URDF + Mesh 模型 | https://github.com/rm-controls/rm_description/tree/master/urdf/drone |
+| rmoss_gz_resources | Gazebo 无人机 SDF 仿真模型 | https://github.com/robomaster-oss/rmoss_gz_resources |
 
 ### 机械设计要点
 
